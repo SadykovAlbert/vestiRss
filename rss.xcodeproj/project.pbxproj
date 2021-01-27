@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50678AAB2563FC5900706259 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50678AAA2563FC5900706259 /* WebKit.framework */; };
+		50CFC95B25C030670028A85D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CFC95A25C030670028A85D /* CollectionViewController.swift */; };
+		50CFC95E25C030900028A85D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CFC95D25C030900028A85D /* CollectionViewCell.swift */; };
 		50DBC2E424A4F57E002F66B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DBC2E324A4F57E002F66B8 /* AppDelegate.swift */; };
 		50DBC2E624A4F57E002F66B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DBC2E524A4F57E002F66B8 /* SceneDelegate.swift */; };
 		50DBC2EB24A4F57E002F66B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50DBC2E924A4F57E002F66B8 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50678AAA2563FC5900706259 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		50CFC95A25C030670028A85D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		50CFC95D25C030900028A85D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		50DBC2E024A4F57E002F66B8 /* rss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DBC2E324A4F57E002F66B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50DBC2E524A4F57E002F66B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,17 +41,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50678AAB2563FC5900706259 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50678AA92563FC5900706259 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50678AAA2563FC5900706259 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50DBC2D724A4F57E002F66B8 = {
 			isa = PBXGroup;
 			children = (
 				50DBC2E224A4F57E002F66B8 /* rss */,
 				50DBC2E124A4F57E002F66B8 /* Products */,
+				50678AA92563FC5900706259 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +78,8 @@
 			children = (
 				50DBC2E324A4F57E002F66B8 /* AppDelegate.swift */,
 				50DBC2E524A4F57E002F66B8 /* SceneDelegate.swift */,
+				50CFC95A25C030670028A85D /* CollectionViewController.swift */,
+				50CFC95D25C030900028A85D /* CollectionViewCell.swift */,
 				50DBC2FB24A4F6B9002F66B8 /* XmlParserManager.swift */,
 				50DBC2F724A4F62C002F66B8 /* FeedListViewController.swift */,
 				50DBC2E924A4F57E002F66B8 /* Main.storyboard */,
@@ -100,7 +118,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = Albert;
 				TargetAttributes = {
 					50DBC2DF24A4F57E002F66B8 = {
@@ -144,8 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50CFC95B25C030670028A85D /* CollectionViewController.swift in Sources */,
 				50DBC2E424A4F57E002F66B8 /* AppDelegate.swift in Sources */,
 				50DBC2FC24A4F6B9002F66B8 /* XmlParserManager.swift in Sources */,
+				50CFC95E25C030900028A85D /* CollectionViewCell.swift in Sources */,
 				50DBC2FA24A4F683002F66B8 /* WebViewController.swift in Sources */,
 				50DBC2F824A4F62C002F66B8 /* FeedListViewController.swift in Sources */,
 				50DBC2E624A4F57E002F66B8 /* SceneDelegate.swift in Sources */,
@@ -200,6 +220,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -260,6 +281,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -293,16 +315,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SQ934LZVXW;
+				DEVELOPMENT_TEAM = 63KQRTRZ55;
 				INFOPLIST_FILE = rss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AlbertSadykov.rss;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertSadykov.rss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -311,16 +333,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SQ934LZVXW;
+				DEVELOPMENT_TEAM = 63KQRTRZ55;
 				INFOPLIST_FILE = rss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AlbertSadykov.rss;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AlbertSadykov.rss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -14,13 +14,16 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
 
     var myFeed : NSArray = []
     var url: URL!
+    var nameOfSource: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = nameOfSource
+        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 140
-        tableView.backgroundColor = .black
+        tableView.backgroundColor = .darkGray
         self.tableView.dataSource = self
         self.tableView.delegate = self
 
@@ -33,7 +36,6 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
     }
 
     func loadData() {
-        url = URL(string:  "https://www.vesti.ru/vesti.rss")!
         loadRss(url);
     }
 
@@ -71,7 +73,10 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = .byWordWrapping
         let dateText = (myFeed.object(at: indexPath.row) as AnyObject).object(forKey: "pubDate") as? String
-        cell.detailTextLabel?.text = dateText?.replacingOccurrences(of: ":00 +0300\n      ", with:"")
+        
+        var dT = dateText
+        dT?.removeLast(dateText!.count - 22)
+        cell.detailTextLabel?.text = dT//?.replacingOccurrences(of: ":00 +0300", with:"")//(of: ":00 +0300\n      ", with:"")
         cell.detailTextLabel?.textColor = UIColor.green
 
         return cell

@@ -74,6 +74,9 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
         cell.textLabel?.lineBreakMode = .byWordWrapping
         let dateText = (myFeed.object(at: indexPath.row) as AnyObject).object(forKey: "pubDate") as? String
         
+        cell.textLabel?.text = cell.textLabel?.text?.replacingOccurrences(of: "\n                    ", with:"")
+        cell.textLabel?.text = cell.textLabel?.text?.replacingOccurrences(of: "\n                \n                ", with:"")
+
         var dT = dateText
         dT?.removeLast(dateText!.count - 22)
         cell.detailTextLabel?.text = dT//?.replacingOccurrences(of: ":00 +0300", with:"")//(of: ":00 +0300\n      ", with:"")

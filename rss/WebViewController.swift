@@ -18,6 +18,8 @@ class WebViewController: UIViewController {
 
         feedURL =  feedURL?.replacingOccurrences(of: " ", with:"")
         feedURL =  feedURL?.replacingOccurrences(of: "\n", with:"")
+        feedURL =  feedURL?.replacingOccurrences(of: "\t", with:"")
+        
         webView.load(URLRequest(url: URL(string: feedURL! as String)!))
     }
     

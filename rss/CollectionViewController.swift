@@ -18,12 +18,16 @@ class CollectionViewController: UICollectionViewController {
     let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
 
     
-    let photosNames = ["Вести","Lenta","Meduza","Дождь","РБК"]
+    let photosNames = ["Вести","Lenta","Meduza","Дождь","РБК", "Медиазона","МБХ Медиа", "ZNAK", "Republic"]
     let urlsNames = ["https://www.vesti.ru/vesti.rss",
                      "https://lenta.ru/rss",
                      "https://meduza.io/rss2/all",
                      "https://tvrain.ru/export/rss/all.xml",
-                     "http://static.feed.rbc.ru/rbc/logical/footer/news.rss"
+                     "http://static.feed.rbc.ru/rbc/logical/footer/news.rss",
+                     "https://zona.media/rss",
+                     "https://mbk-news.appspot.com/feed/",
+                     "https://www.znak.com/rss",
+                     "https://republic.ru/export/all.xml"
     ]
     
     
